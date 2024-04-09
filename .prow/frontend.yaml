@@ -14,11 +14,9 @@ presubmits:
             - |
               set -euo pipefail
 
-              npm ci
+              npm ci --loglevel verbose
               npm run cy:verify
               npm run cy:info
-
-              npm run start&
 
               set +e
               npm run e2e
